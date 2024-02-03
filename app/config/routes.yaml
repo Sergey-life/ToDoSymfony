@@ -1,0 +1,32 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+create_task:
+    path: /api/tasks/create
+    controller: App\Controller\TaskController::create
+    methods: POST
+
+delete_task:
+    path: /api/tasks/delete/{id}
+    controller: App\Controller\TaskController::delete
+    methods: DELETE
+
+complete_task:
+    path: /api/tasks/complete/{id}
+    controller: App\Controller\TaskController::complete
+    methods: PUT
+
+update_task:
+    path: /api/tasks/update/{id}
+    controller: App\Controller\TaskController::update
+    methods: PUT
+
+list_task:
+    path: /api/tasks/list
+    controller: App\Controller\TaskController::list
+    methods: GET
