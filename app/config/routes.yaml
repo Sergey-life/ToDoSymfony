@@ -8,25 +8,25 @@ kernel:
 
 create_task:
     path: /api/tasks/create
-    controller: App\Controller\TaskController::create
+    controller: App\Controller\Api\TaskController::create
     methods: POST
 
 delete_task:
     path: /api/tasks/delete/{id}
-    controller: App\Controller\TaskController::delete
+    controller: App\Controller\Api\TaskController::delete
     methods: DELETE
 
 complete_task:
     path: /api/tasks/complete/{id}
-    controller: App\Controller\TaskController::complete
+    controller: App\Controller\Api\TaskController::complete
     methods: PUT
 
 update_task:
     path: /api/tasks/update/{id}
-    controller: App\Controller\TaskController::update
+    controller: App\Controller\Api\TaskController::update
     methods: PUT
 
 list_task:
     path: /api/tasks/list
-    controller: App\Controller\TaskController::list
+    controller: App\Controller\Api\TaskController::list
     methods: GET
